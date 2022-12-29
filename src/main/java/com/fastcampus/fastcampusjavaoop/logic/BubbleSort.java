@@ -5,8 +5,9 @@ import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BubbleSort <T extends Comparable<T>> {
+public class BubbleSort <T extends Comparable<T>> implements Sort<T>{
 
+    @Override
     public List<T> sort (List<T> list){ //입력 리스트를 받아서 출력으로 정렬된 리스트를 보내줌
         List<T> output = new ArrayList<>(list);
 
